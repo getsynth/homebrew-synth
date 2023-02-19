@@ -8,7 +8,7 @@ class Synth < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo" "+nightly" "build" "--locked" "--bin" "synth"
+    system "cargo", "+nightly", "build", "--locked", "--bin", "synth"
     bin.install "target/release/synth"
   end
 end
